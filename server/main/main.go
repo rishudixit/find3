@@ -12,10 +12,10 @@ import (
 
 	"fmt"
 
-	"github.com/schollz/find3/server/main/src/api"
-	"github.com/schollz/find3/server/main/src/database"
-	"github.com/schollz/find3/server/main/src/mqtt"
-	"github.com/schollz/find3/server/main/src/server"
+	"github.com/rishudixit/find3/server/main/src/api"
+	"github.com/rishudixit/find3/server/main/src/database"
+	"github.com/rishudixit/find3/server/main/src/mqtt"
+	"github.com/rishudixit/find3/server/main/src/server"
 )
 
 func main() {

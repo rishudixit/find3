@@ -39,12 +39,12 @@ The basis of this system is to catalog all the fingerprints about the Wifi route
 
 Locations are determined on the FIND server using classification. Currently the server supports several different machine learning algorithms. Positioning by classification is accomplished by first learning the distributions of WiFi signals for a given location and then classifying it during tracking. Learning only takes ~10 minutes and will last almost indefinitely. The WiFi fingerprints are also the same across all devices so that learning using one device is guaranteed to work across all devices.
 
-FIND3 is an [open-source project](https://github.com/schollz/find3) that comprises several main components:
+FIND3 is an [open-source project](https://github.com/rishudixit/find3) that comprises several main components:
 
-1. Data storage server [(github.com/schollz/find3/server/main)](https://github.com/schollz/find3/tree/master/server/main)
-2. Machine learning server [(github.com/schollz/find3/server/ai)](https://github.com/schollz/find3/tree/master/server/ai)
-3. Command-line tool for gathering fingerprints [(schollz/find3-cli-scanner)](https://github.com/schollz/find3-cli-scanner)
-4. Android app for gathering fingerprints [(schollz/find3-android-scanner)](https://github.com/schollz/find3-android-scanner)
+1. Data storage server [(github.com/rishudixit/find3/server/main)](https://github.com/rishudixit/find3/tree/master/server/main)
+2. Machine learning server [(github.com/rishudixit/find3/server/ai)](https://github.com/rishudixit/find3/tree/master/server/ai)
+3. Command-line tool for gathering fingerprints [(rishudixit/find3-cli-scanner)](https://github.com/rishudixit/find3-cli-scanner)
+4. Android app for gathering fingerprints [(rishudixit/find3-android-scanner)](https://github.com/rishudixit/find3-android-scanner)
 
 Using these elements as building blocks, FIND3 provides the ability to track devices indoors, without motion sensors.
 
@@ -206,7 +206,7 @@ At this point, the accuracy had improved enough for me to move on to learn other
 
 ## Can I run FIND3 on a Raspberry Pi?
 
-Yes. Just make sure to build the server and/or client natively from the source code. If you use Docker, make sure to [install Docker correctly](https://github.com/schollz/find3/issues/1#issuecomment-370205508) and build the Docker images yourself and note that you need at least 1GB of RAM and 1GB of Swap to build the images. 
+Yes. Just make sure to build the server and/or client natively from the source code. If you use Docker, make sure to [install Docker correctly](https://github.com/rishudixit/find3/issues/1#issuecomment-370205508) and build the Docker images yourself and note that you need at least 1GB of RAM and 1GB of Swap to build the images. 
 
 ## Why use SQLite vs BoltDB?
 

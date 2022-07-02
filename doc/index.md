@@ -15,14 +15,14 @@ FIND3 is in its early days, but the plan is to develop a **Framework for Interna
 If you'd like to help us make that vision a reality, we'd love to have you try
 out FIND3.
 
-FIND3 is an [open-source project](https://github.com/schollz/find3) that
+FIND3 is an [open-source project](https://github.com/rishudixit/find3) that
 comprises several main components:
 
 
-1. Data storage server [(github.com/schollz/find3/server/main)](https://github.com/schollz/find3/tree/master/server/main)
-2. Machine learning server [(github.com/schollz/find3/server/ai)](https://github.com/schollz/find3/tree/master/server/ai)
-3. Command-line tool for gathering fingerprints [(schollz/find3-cli-scanner)](https://github.com/schollz/find3-cli-scanner)
-4. Android app for gathering fingerprints [(schollz/find3-android-scanner)](https://github.com/schollz/find3-android-scanner)
+1. Data storage server [(github.com/rishudixit/find3/server/main)](https://github.com/rishudixit/find3/tree/master/server/main)
+2. Machine learning server [(github.com/rishudixit/find3/server/ai)](https://github.com/rishudixit/find3/tree/master/server/ai)
+3. Command-line tool for gathering fingerprints [(rishudixit/find3-cli-scanner)](https://github.com/rishudixit/find3-cli-scanner)
+4. Android app for gathering fingerprints [(rishudixit/find3-android-scanner)](https://github.com/rishudixit/find3-android-scanner)
 
 
 Using these elements as building blocks, FIND3 provides the ability to track devices indoors, without motion sensors.
@@ -43,14 +43,14 @@ These resources support the open source project and
 point to things such as the GitHub repository,
 mailing lists, user forums, and so on.
 
-- [The FIND3 project on GitHub](https://github.com/schollz/find3)
-- [Issue tracker](https://github.com/schollz/find3/issues)
+- [The FIND3 project on GitHub](https://github.com/rishudixit/find3)
+- [Issue tracker](https://github.com/rishudixit/find3/issues)
 - Official discussion forums / mailing lists:
   - [Slack channel](https://join.slack.com/t/find3/shared_invite/enQtMzU4MjY0NjE1NjU0LWRkY2JhNWFkM2U3Y2JhY2RlZTQ5ZTdmZTQ2M2UzMjI2MGVmMjZlOWQyZmU3MzM5YzIzOTM0YmYzYmQ3NTQzNjQ),
     for discussion FIND3 users and developers.
   - [FIND mailing list](http://eepurl.com/bhfFI1),
     a low-traffic list for important announcements about the project;
     all FIND3 users should subscribe.
-- [Contribution guidelines](https://github.com/schollz/find3/blob/master/CONTRIBUTING.md)
+- [Contribution guidelines](https://github.com/rishudixit/find3/blob/master/CONTRIBUTING.md)
 
 

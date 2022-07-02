@@ -155,8 +155,8 @@ $ http POST https://cloud.internalpositioning.com/api/v1/settings/passive \
 
 ## Issues?
 
-If you have issues, please [file a bug report on Github](https://github.com/schollz/find3/issues/new?template=bugs.md&title=Bug:%20).
+If you have issues, please [file a bug report on Github](https://github.com/rishudixit/find3/issues/new?template=bugs.md&title=Bug:%20).
 
 ## Source
 
-If you are interested, the app is completely open-source and available at  https://github.com/schollz/find3.
+If you are interested, the app is completely open-source and available at  https://github.com/rishudixit/find3.

@@ -46,7 +46,7 @@ RUN python3 -m pip install Cython --install-option="--no-cython-compile" && \
 	export PATH="/usr/local/go/bin:$PATH"; \
 	go version && \
 	mkdir /build && cd /build && \
-	git clone https://github.com/schollz/find3 && \
+	git clone https://github.com/rishudixit/find3 && \
 	mkdir /data && \
 	mkdir /app && \
 	echo '#!/bin/bash\n\

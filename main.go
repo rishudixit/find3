@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/schollz/find3/doc"
+	"github.com/rishudixit/find3/doc"
 )
 
 func main() {

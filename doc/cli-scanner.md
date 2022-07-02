@@ -6,7 +6,7 @@ The command-line scanner provides a means for your laptop your computer to monit
 
 ## Install
 
-There are a couple of ways to install. I recommend downloading the [latest release](https://github.com/schollz/find3-cli-scanner/releases/latest) as that is the easiest way.
+There are a couple of ways to install. I recommend downloading the [latest release](https://github.com/rishudixit/find3-cli-scanner/releases/latest) as that is the easiest way.
 
 ### Install natively
 
@@ -35,7 +35,7 @@ $ brew install libpcap
 Now download and install the scanner with *go get*:
 
 ```
-$ go get -u -v github.com/schollz/find3-cli-scanner
+$ go get -u -v github.com/rishudixit/find3-cli-scanner
 ```
 
 If you are on Linux, then you should move it to a path that is available with sudo:
@@ -57,20 +57,20 @@ $ curl -sSL https://get.docker.com | sh
 If *not* using a Raspberry Pi, fetch the latest image.
 
 ```
-$ docker pull schollz/find3-cli-scanner
+$ docker pull rishudixit/find3-cli-scanner
 ```
 
 If you are using a Raspberry Pi (`armf` arch), you need to build the image yourself, although I suggest Raspberry Pi's just built natively above.
 
 ```
-$ wget https://raw.githubusercontent.com/schollz/find3-cli-scanner/master/Dockerfile
-$ docker build -t schollz/find3-cli-scanner .
+$ wget https://raw.githubusercontent.com/rishudixit/find3-cli-scanner/master/Dockerfile
+$ docker build -t rishudixit/find3-cli-scanner .
 ```
 
 Now you can start the scanning image in the background.
 
 ```
-$ docker run --net="host" --privileged --name scanner -d -i -t schollz/find3-cli-scanner
+$ docker run --net="host" --privileged --name scanner -d -i -t rishudixit/find3-cli-scanner
 ```
 
 To use the scanner, your syntax will be
@@ -160,11 +160,11 @@ $ nohup find3-cli-scanner -i YOURINTERFACE \
 
 ## Issues?
 
-If you have issues, please [file a bug report on Github](https://github.com/schollz/find3-cli-scanner/issues/new?template=bugs.md&title=Bug:%20).
+If you have issues, please [file a bug report on Github](https://github.com/rishudixit/find3-cli-scanner/issues/new?template=bugs.md&title=Bug:%20).
 
 ## Source
 
-If you are interested, the app is completely open-source and available at  https://github.com/schollz/find3-cli-scanner.
+If you are interested, the app is completely open-source and available at  https://github.com/rishudixit/find3-cli-scanner.
 
 ## LICENSE
 

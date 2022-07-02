@@ -62,8 +62,8 @@ You can also get raw data from FIND3 by using the REST commands outlined in the 
 
 ## Issues?
 
-If you have issues, please file one on Github at https://github.com/schollz/find3.
+If you have issues, please file one on Github at https://github.com/rishudixit/find3.
 
 ## Source
 
-If you are interested, the app is completely open-source and available on [Github](https://github.com/schollz/find3-android-scanner).
+If you are interested, the app is completely open-source and available on [Github](https://github.com/rishudixit/find3-android-scanner).

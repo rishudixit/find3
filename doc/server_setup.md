@@ -23,14 +23,14 @@ $ curl -sSL https://get.docker.com | sh
 This command will work (and has been tested) on Raspberry Pis. If you are not on a Raspberry Pi, then you can just pull the latest image using:
 
 ```bash
-$ docker pull schollz/find3
+$ docker pull rishudixit/find3
 ```
 
 However, if you are using a Raspberry Pi, you'll need to build the `armf` version yourself. Then you should get the latest *Dockerfile*:
 
 ```bash
-$ wget https://raw.githubusercontent.com/schollz/find3/master/Dockerfile
-$ docker build -t schollz/find3 .
+$ wget https://raw.githubusercontent.com/rishudixit/find3/master/Dockerfile
+$ docker build -t rishudixit/find3 .
 ```
 
 That's it! Now FIND3 should be installed and read to go. To start it, make a directory to store the data, say `/home/$USER/FIND_DATA` and then start the Docker process in the background.
@@ -43,7 +43,7 @@ $ docker run -p 1884:1883 -p 8005:8003 \
     -e MQTT_SERVER='localhost:1883' \
 	-e MQTT_EXTERNAL='your public IP' \
 	-e MQTT_PORT=1884 \
-	--name find3server -d -t schollz/find3
+	--name find3server -d -t rishudixit/find3
 ```
 
 Now the server will be running on port `8005` and have an MQTT instance running on port `11883`. Make sure to change `ADMIN` and `PASSWORD` to a admin user name and password. Do not change `MQTT_SERVER`, as it runs on the Docker image.
@@ -67,27 +67,27 @@ $ sudo apt-get install mosquitto-clients mosquitto
 Then get the latest source and Go dependencies.
 
 ```
-$ go get -u -v github.com/schollz/find3/...
+$ go get -u -v github.com/rishudixit/find3/...
 ```
 
 Then install the Python dependencies.
 
 ```
-$ cd $GOPATH/src/github.com/schollz/find3/server/ai
+$ cd $GOPATH/src/github.com/rishudixit/find3/server/ai
 $ sudo python3 -m pip install -r requirements.txt
 ```
 
 Now there are two pieces of the server to start. In one terminal you can run the AI server.
 
 ```
-$ cd $GOPATH/src/github.com/schollz/find3/server/ai
+$ cd $GOPATH/src/github.com/rishudixit/find3/server/ai
 $ make
 ```
 
 In the other terminal you can run the main data storage server.
 
 ```
-$ cd $GOPATH/src/github.com/schollz/find3/server/main
+$ cd $GOPATH/src/github.com/rishudixit/find3/server/main
 $ go build -v
 $ ./main -port 8005 
 ```
@@ -97,7 +97,7 @@ $ ./main -port 8005
 To test that things are working you can submit some test data to the server. Download a test script which will make requests to the server:
 
 ```bash
-$ cd $GOPATH/src/github.com/schollz/find3/server/main/testing
+$ cd $GOPATH/src/github.com/rishudixit/find3/server/main/testing
 $ python3 submit_jsons.py http://localhost:8005 testdb.learn.1439597065993.jsons
 ```
 

@@ -7,7 +7,7 @@ In this tutorial you will learn how to do internal positioning on a computer usi
 
 ## Pre-requisites
 
-First you will need the [FIND3 command-line scanner](https://github.com/schollz/find3-cli-scanner). You can install this using Docker, by compiling from source. Follow the instructions in the [Command-line scanner](/doc/cli-scanner.md) document to install the scanner.
+First you will need the [FIND3 command-line scanner](https://github.com/rishudixit/find3-cli-scanner). You can install this using Docker, by compiling from source. Follow the instructions in the [Command-line scanner](/doc/cli-scanner.md) document to install the scanner.
 
 ## Learning
 
@@ -71,8 +71,8 @@ Once you have learned several locations and are tracking with the computers, you
 
 ## Issues
 
-If you have issues, please [file a bug report](https://github.com/schollz/find3-cli-scanner/issues/new?template=bugs.md&title=Bug:%20).
+If you have issues, please [file a bug report](https://github.com/rishudixit/find3-cli-scanner/issues/new?template=bugs.md&title=Bug:%20).
 
 ## Source
 
-If you are programming inclined, the app is completely open-source and available on [Github](https://github.com/schollz/find3-cli-scanner).
+If you are programming inclined, the app is completely open-source and available on [Github](https://github.com/rishudixit/find3-cli-scanner).
