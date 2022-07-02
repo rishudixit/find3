@@ -262,6 +262,9 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 	}
 
 
+	logger.Log.Debugf("Location and Probability ---- from database ----    %s  ", string(result))
+
+
 	// Getting Last Known Locations
 	stmt2, err2 := d.db.Prepare("SELECT prediction FROM location_predictions WHERE deviceid = ? AND prediction!='[{\"location\":\"?\",\"probability\":1}]' ORDER BY timestamp DESC LIMIT 1")
 
@@ -276,6 +279,10 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 		err2 = errors.Wrap(err2, "problem getting key")
 		return
 	}
+
+
+	logger.Log.Debugf("Last Known Location and Last Location Probability ---- from database ----    %s  ", string(result2))
+
 
 	var currlocdata map[string]interface{}
 
@@ -312,7 +319,7 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 	}
 
 
-	// logger.Log.Debugf("got %s from '%s'", string(result), key)
+	logger.Log.Debugf("Combined Last Known Location and ---- All  from database ----   %s  ", string(p))
 	return
 }
 

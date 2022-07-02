@@ -648,8 +648,14 @@ func handlerApiV1Locations(c *gin.Context) {
 			predictions, err := d.GetPrediction(locations[i].Sensors.Timestamp, device)
 			d.Close()
 			if err == nil && len(predictions) > 0 {
+
+				logger.Log.Debugf("[%s] getting prediction from database %s", family, device)
+
 				locations[i].Prediction = predictions[0]
 			} else {
+
+				logger.Log.Debugf("[%s] getting prediction from AnalyzeSensorData %s", family, device)
+
 				analysis, err := api.AnalyzeSensorData(locations[i].Sensors)
 				if err != nil {
 					continue
