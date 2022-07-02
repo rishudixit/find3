@@ -274,7 +274,7 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 	}
 	defer stmt2.Close()
 	var result2 string
-	err2 = stmt.QueryRow(deviceID).Scan(&result2)
+	err2 = stmt2.QueryRow(deviceID).Scan(&result2)
 	if err2 != nil {
 		err2 = errors.Wrap(err2, "problem getting key")
 		return
