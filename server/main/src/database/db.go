@@ -301,7 +301,6 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 		return
 	}
 
-	var locdata map[string]interface{}
 
 	currlocdata[0]["lastknownlocation"] = lastlocdata[0]["location"]
 	currlocdata[0]["lastknownprobability"] = lastlocdata[0]["probability"]
