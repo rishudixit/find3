@@ -284,10 +284,10 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 	logger.Log.Debugf("Last Known Location and Last Location Probability ---- from database ----    %s  ", string(result2))
 
 
-	var currlocdata map[string]interface{}
+	var currlocdata []map[string]interface{}
 
+	var lastlocdata []map[string]interface{}
 
-	var lastlocdata map[string]interface{}
 
 
 	err = json.Unmarshal([]byte(result), &currlocdata)
@@ -303,13 +303,10 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 
 	var locdata map[string]interface{}
 
-	locdata["location"] = currlocdata["location"]
-	locdata["probability"] = currlocdata["probability"]
-	locdata["lastknownlocation"] = lastlocdata["location"]
-	locdata["lastknownprobability"] = lastlocdata["probability"]
+	currlocdata[0]["lastknownlocation"] = lastlocdata[0]["location"]
+	currlocdata[0]["lastknownprobability"] = lastlocdata[0]["probability"]
 
-
-	manipulatedata, _ := json.Marshal(locdata)
+	manipulatedata, _ := json.Marshal(currlocdata)
 
 	var p string = string(manipulatedata)
 	
