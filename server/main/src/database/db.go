@@ -266,7 +266,7 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 
 
 	// Getting Last Known Locations
-	stmt2, err2 := d.db.Prepare("SELECT prediction FROM location_predictions WHERE deviceid = ? AND prediction!='[{\"location\":\"?\",\"probability\":1}]' ORDER BY timestamp DESC LIMIT 1")
+	stmt2, err2 := d.db.Prepare("SELECT timestamp, prediction FROM location_predictions WHERE deviceid = ? AND prediction!='[{\"location\":\"?\",\"probability\":1}]' ORDER BY timestamp DESC LIMIT 1")
 
 	if err2 != nil {	
 		err2 = errors.Wrap(err2, "problem preparing SQL")
@@ -274,7 +274,8 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 	}
 	defer stmt2.Close()
 	var result2 string
-	err2 = stmt2.QueryRow(deviceID).Scan(&result2)
+	var lastseentimestamp int64
+	err2 = stmt2.QueryRow(deviceID).Scan(&lastseentimestamp, &result2)
 	if err2 != nil {
 		err2 = errors.Wrap(err2, "problem getting key")
 		return
@@ -304,6 +305,7 @@ func (d *Database) GetPrediction(timestamp int64, device string) (aidata []model
 
 	currlocdata[0]["lastknownlocation"] = lastlocdata[0]["location"]
 	currlocdata[0]["lastknownprobability"] = lastlocdata[0]["probability"]
+	currlocdata[0]["lastseentime"] = lastseentimestamp
 
 	manipulatedata, _ := json.Marshal(currlocdata)
 

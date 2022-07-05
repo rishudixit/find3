@@ -18,4 +18,5 @@ type LocationPrediction struct {
 	Probability float64 `json:"probability,omitempty"`
 	LastKnownLocation    string  `json:"lastknownlocation,omitempty"`
 	LastKnownProbability float64 `json:"lastknownprobability,omitempty"`
+	LastSeenTime int64 `json:"lastseentime,omitempty"`
 }
