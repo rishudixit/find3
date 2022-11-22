@@ -654,8 +654,6 @@ func handlerApiV1Locations(c *gin.Context) {
 				locations[i].Prediction = predictions[0]
 			} else {
 
-				logger.Log.Debugf(err.Error())
-
 				logger.Log.Debugf("[%s] getting prediction from AnalyzeSensorData %s", family, device)
 
 				analysis, err := api.AnalyzeSensorData(locations[i].Sensors)
